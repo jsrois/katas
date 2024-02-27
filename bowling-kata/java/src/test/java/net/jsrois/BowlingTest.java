@@ -16,6 +16,6 @@ public class BowlingTest {
         assertThat(score.of("9- 9- 9- 9- 9- 9- 9- 9- 9- 9-"), equalTo(90));
         assertThat(score.of("9- 9- 9- 8- 9- 9- 9- 9- 9- 9-"), equalTo(89));
         assertThat(score.of("9- 9- 41 8- 9- 9- 9- 9- 9- 9-"), equalTo(85));
-    }
+    }   
 
 }

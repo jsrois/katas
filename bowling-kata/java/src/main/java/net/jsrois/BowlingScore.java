@@ -14,11 +14,10 @@ public class BowlingScore {
 
     private Integer getScoreForFrame(String frameScore) {
         // 9- 73 8-
-        Integer score = 0;
-        for (char c : frameScore.replaceAll("[^0-9]", "").toCharArray()) {
-            score += Integer.valueOf(String.valueOf(c));
-        }
-        return score;
+        return frameScore.chars()
+                .filter( c -> Character.isDigit(c))
+                .map(Character::getNumericValue)
+                .sum();
     }
 
 }
